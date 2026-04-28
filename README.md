@@ -18,27 +18,27 @@ struct FileHeader {
     char FileName[100]; // Original name of the file
     int Filesize;       // Size of the file in bytes
 };
+
 🚀 Usage
+
 1. Compilation
 Use gcc to compile the source code:
-
-Bash
 gcc Package&unpackage.c -o mypacker
-2. Packing Files
-To bundle files from a directory into a single archive:
 
-Bash
+3. Packing Files
+To bundle files from a directory into a single archive:
 ./mypacker pack <Source_Directory> <Output_Archive_Name>
+
 Example: ./mypacker pack ./my_docs archive.dat
 
 3. Unpacking Files
 To extract files from an archive into a new directory:
-
-Bash
 ./mypacker unpack <Archive_Name> <Destination_Directory>
+
 Example: ./mypacker unpack archive.dat ./extracted_files
 
 📝 Logic Overview
+
 Packing Process (PackFiles)
 Opens the target directory using opendir() and iterates through entries via readdir().
 
